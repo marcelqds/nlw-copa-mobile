@@ -6,9 +6,11 @@ import {
   Roboto_700Bold
 } from '@expo-google-fonts/roboto';
 
+import { AuthContextProvider } from './src/contexts/AuthContext';
+
 import { Loading } from './src/components';
-import { SignIn } from './src/screens';
 import { THEME } from './src/styles/theme';
+import { New, SignIn, Find, Pools } from './src/screens';
 
 export default function App() {
 
@@ -19,18 +21,20 @@ export default function App() {
   });
 
   return (
-    <NativeBaseProvider theme={THEME}>
-      <StatusBar 
-        barStyle="light-content" 
-        backgroundColor="transparent"
-        translucent
-        />
+    <AuthContextProvider>
+      <NativeBaseProvider theme={THEME}>
+        <StatusBar 
+          barStyle="light-content" 
+          backgroundColor="transparent"
+          translucent
+          />
 
-      {
-        fontsLoaded ? < SignIn /> : < Loading />
-      } 
-           
-    </NativeBaseProvider>
+        {
+          fontsLoaded ? < Pools /> : < Loading />
+        } 
+            
+      </NativeBaseProvider>
+    </AuthContextProvider>
   );
 
 }
