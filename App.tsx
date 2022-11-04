@@ -10,7 +10,8 @@ import { AuthContextProvider } from './src/contexts/AuthContext';
 
 import { Loading } from './src/components';
 import { THEME } from './src/styles/theme';
-import { New, SignIn, Find, Pools } from './src/screens';
+// import { New, SignIn, Find, Polls } from './src/screens';
+import { Routes } from './src/routes';
 
 export default function App() {
 
@@ -30,7 +31,7 @@ export default function App() {
           />
 
         {
-          fontsLoaded ? < Pools /> : < Loading />
+          fontsLoaded ? < Routes /> : < Loading />
         } 
             
       </NativeBaseProvider>

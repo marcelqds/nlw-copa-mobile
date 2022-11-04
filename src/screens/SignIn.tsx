@@ -20,6 +20,7 @@ export const SignIn = () => {
             mt={12}
             onPress={signIn}
             isLoading={isUserLoading}
+            _loading={{_spinner: {color :'white'} }}
           />
           <Text color='white' textAlign='center' mt={4}>
             Não utilizamos nenhuma informação além {'\n'} do seu e-mail para criação de sua conta.

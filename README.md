@@ -24,3 +24,11 @@
 - npm install -D @types/country-list
 [React Native Country Flag](https://github.com/YannisHofmann/react-native-country-flag#readme)
 npm install react-native-country-flag
+[React Navigation](https://reactnavigation.org/docs/getting-started/)
+- npm install @react-navigation/native
+Dependências
+- expo install react-native-screens react-native-safe-area-context
+Tab Navigation
+- npm install @react-navigation/bottom-tabs
+Axios
+- npm install axios
